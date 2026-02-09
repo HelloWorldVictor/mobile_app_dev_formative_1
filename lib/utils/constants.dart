@@ -1,43 +1,43 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  // ALU Primary Colors - Enhanced
-  static const Color primary = Color(0xFFE91E63); // Vibrant Pink
-  static const Color primaryDark = Color(0xFFC2185B); // Deep Pink
-  static const Color primaryLight = Color(0xFFF8BBD0); // Light Pink
+  // ALU Primary Colors - From Official CSS Variables
+  static const Color primary = Color(0xFFD00D2D); // ALU Red - Primary Buttons
+  static const Color primaryDark = Color(0xFFB00A25); // Darker Red
+  static const Color primaryLight = Color(0xFFE04A5F); // Lighter Red
 
-  static const Color secondary = Color(0xFF1A237E); // Rich Indigo
-  static const Color secondaryDark = Color(0xFF0D1642); // Deep Navy
-  static const Color secondaryLight = Color(0xFF3949AB); // Bright Indigo
+  static const Color secondary = Color(0xFF002E6D); // ALU Navy Blue
+  static const Color secondaryDark = Color(0xFF001F4D); // Deep Navy
+  static const Color secondaryLight = Color(0xFF1A4A8A); // Lighter Navy
 
-  static const Color accent = Color(0xFF00BCD4); // Cyan Accent
-  static const Color accentLight = Color(0xFF80DEEA); // Light Cyan
-  static const Color accentDark = Color(0xFF00838F); // Dark Cyan
+  static const Color accent = Color(0xFF6EC1E4); // ALU Sky Blue Accent
+  static const Color accentLight = Color(0xFF9DD4ED); // Light Sky Blue
+  static const Color accentDark = Color(0xFF4FA8CC); // Dark Sky Blue
 
-  // Functional Colors - Enhanced
-  static const Color success = Color(0xFF4CAF50); // Material Green
-  static const Color successLight = Color(0xFF81C784); // Light Green
+  // Functional Colors - Using ALU Brand Colors
+  static const Color success = Color(0xFF61CE70); // ALU Green
+  static const Color successLight = Color(0xFF8EDBA0); // Light Green
   static const Color warning = Color(0xFFFFA726); // Warm Orange
   static const Color warningLight = Color(0xFFFFCC80); // Light Orange
-  static const Color danger = Color(0xFFE53935); // Vivid Red
-  static const Color dangerLight = Color(0xFFEF5350); // Light Red
-  static const Color info = Color(0xFF2196F3); // Bright Blue
-  static const Color infoLight = Color(0xFF64B5F6); // Light Blue
+  static const Color danger = Color(0xFFD00D2D); // ALU Red
+  static const Color dangerLight = Color(0xFFE04A5F); // Light Red
+  static const Color info = Color(0xFF6EC1E4); // ALU Sky Blue
+  static const Color infoLight = Color(0xFF9DD4ED); // Light Sky Blue
 
-  // Neutral Colors - Enhanced
-  static const Color background = Color(0xFFF5F7FA); // Soft Blue-Grey
-  static const Color backgroundDark = Color(0xFFECEFF1); // Darker Grey
+  // Neutral Colors - Clean White Theme
+  static const Color background = Color(0xFFFFFFFF); // Pure White
+  static const Color backgroundDark = Color(0xFFF8F9FA); // Off White
   static const Color surface = Color(0xFFFFFFFF); // Pure White
   static const Color surfaceElevated = Color(0xFFFAFBFC); // Slightly Off-White
 
-  static const Color text = Color(0xFF212121); // Rich Black
-  static const Color textSecondary = Color(0xFF616161); // Medium Grey
+  static const Color text = Color(0xFF54595F); // ALU Secondary Text
+  static const Color textSecondary = Color(0xFF7A7A7A); // ALU Text Color
   static const Color textLight = Color(0xFF9E9E9E); // Light Grey
   static const Color textDisabled = Color(0xFFBDBDBD); // Disabled Grey
 
   // Borders & Dividers
-  static const Color border = Color(0xFFE0E0E0); // Light Border
-  static const Color divider = Color(0xFFEEEEEE); // Subtle Divider
+  static const Color border = Color(0xFFE5E7EB); // Light Border
+  static const Color divider = Color(0xFFF3F4F6); // Subtle Divider
 
   // Gradients
   static const LinearGradient primaryGradient = LinearGradient(
