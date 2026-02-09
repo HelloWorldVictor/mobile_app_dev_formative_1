@@ -3,9 +3,9 @@ import '../screens/main_screen.dart';
 import '../screens/dashboard_screen.dart';
 import '../screens/assignments_screen.dart';
 import '../screens/schedule_screen.dart';
-import '../screens/add_assignment_screen.dart';
+import '../screens/add_assignments_screen.dart';
 import '../screens/add_session_screen.dart';
-import '../models/assignment.dart';
+import '../models/assignments.dart';
 import '../models/session.dart';
 
 /// Route names
