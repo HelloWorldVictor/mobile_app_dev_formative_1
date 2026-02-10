@@ -36,7 +36,7 @@ class ScheduleScreenState extends State<ScheduleScreen> {
 
   Future<void> _toggleSessionAttendance(Session session) async {
     final success = await StorageService.toggleSessionAttendance(session);
-    if (success) {
+    if (success && mounted) {
       _loadSessions();
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
@@ -70,7 +70,7 @@ class ScheduleScreenState extends State<ScheduleScreen> {
 
     if (confirmed == true) {
       final success = await StorageService.deleteSession(session.id!);
-      if (success) {
+      if (success && mounted) {
         _loadSessions();
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
@@ -163,7 +163,7 @@ class ScheduleScreenState extends State<ScheduleScreen> {
         subtitle: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('${session.date.toString().split(' ')[0]}'),
+            Text(session.date.toString().split(' ')[0]),
             Text(
               '${_formatTime(session.startTime)} - ${_formatTime(session.endTime)}',
             ),

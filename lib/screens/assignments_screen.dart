@@ -36,7 +36,7 @@ class AssignmentsScreenState extends State<AssignmentsScreen> {
 
   Future<void> _toggleAssignmentCompletion(Assignment assignment) async {
     final success = await StorageService.toggleAssignmentCompletion(assignment);
-    if (success) {
+    if (success && mounted) {
       _loadAssignments();
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
@@ -72,7 +72,7 @@ class AssignmentsScreenState extends State<AssignmentsScreen> {
 
     if (confirmed == true) {
       final success = await StorageService.deleteAssignment(assignment.id!);
-      if (success) {
+      if (success && mounted) {
         _loadAssignments();
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(

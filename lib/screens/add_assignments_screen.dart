@@ -58,7 +58,7 @@ class AddAssignmentScreenState extends State<AddAssignmentScreen> {
       success = await StorageService.addAssignment(assignment);
     }
 
-    if (success) {
+    if (success && mounted) {
       Navigator.pop(context);
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
@@ -66,7 +66,7 @@ class AddAssignmentScreenState extends State<AddAssignmentScreen> {
           backgroundColor: AppColors.success,
         ),
       );
-    } else {
+    } else if (mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           content: Text('Error saving assignment'),
@@ -161,7 +161,7 @@ class AddAssignmentScreenState extends State<AddAssignmentScreen> {
               ),
               const SizedBox(height: 16),
               DropdownButtonFormField<String>(
-                value: _priority,
+                initialValue: _priority,
                 decoration: const InputDecoration(
                   labelText: AppStrings.priority,
                   border: OutlineInputBorder(),

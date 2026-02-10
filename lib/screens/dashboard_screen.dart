@@ -192,7 +192,6 @@ class DashboardScreenState extends State<DashboardScreen> {
   }
 
   Widget _buildAttendanceCard() {
-    // TODO: Get actual attendance percentage
     final attendancePercentage = dashboardData['attendancePercentage'] ?? 0.0;
     final isWarning = attendancePercentage < 75;
 
@@ -262,8 +261,7 @@ class DashboardScreenState extends State<DashboardScreen> {
           _buildEmptySessionsState()
         else
           ...todaySessions
-              .map((session) => _buildSessionCard(session))
-              .toList(),
+              .map((session) => _buildSessionCard(session)),
       ],
     );
   }
@@ -385,8 +383,7 @@ class DashboardScreenState extends State<DashboardScreen> {
           _buildEmptyAssignmentsState()
         else
           ...upcomingAssignments
-              .map((assignment) => _buildAssignmentCard(assignment))
-              .toList(),
+              .map((assignment) => _buildAssignmentCard(assignment)),
       ],
     );
   }

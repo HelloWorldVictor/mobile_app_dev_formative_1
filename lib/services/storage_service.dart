@@ -9,7 +9,6 @@ class StorageService {
     try {
       return await DatabaseHelper.getAllAssignments();
     } catch (e) {
-      print('Error getting assignments: $e');
       return [];
     }
   }
@@ -18,7 +17,6 @@ class StorageService {
     try {
       return await DatabaseHelper.getUpcomingAssignments();
     } catch (e) {
-      print('Error getting upcoming assignments: $e');
       return [];
     }
   }
@@ -28,7 +26,6 @@ class StorageService {
       await DatabaseHelper.insertAssignment(assignment);
       return true;
     } catch (e) {
-      print('Error adding assignment: $e');
       return false;
     }
   }
@@ -38,7 +35,6 @@ class StorageService {
       await DatabaseHelper.updateAssignment(assignment);
       return true;
     } catch (e) {
-      print('Error updating assignment: $e');
       return false;
     }
   }
@@ -48,7 +44,6 @@ class StorageService {
       await DatabaseHelper.deleteAssignment(id);
       return true;
     } catch (e) {
-      print('Error deleting assignment: $e');
       return false;
     }
   }
@@ -61,7 +56,6 @@ class StorageService {
       await DatabaseHelper.updateAssignment(updatedAssignment);
       return true;
     } catch (e) {
-      print('Error toggling assignment completion: $e');
       return false;
     }
   }
@@ -72,7 +66,6 @@ class StorageService {
     try {
       return await DatabaseHelper.getAllSessions();
     } catch (e) {
-      print('Error getting sessions: $e');
       return [];
     }
   }
@@ -81,7 +74,6 @@ class StorageService {
     try {
       return await DatabaseHelper.getTodaySessions();
     } catch (e) {
-      print('Error getting today sessions: $e');
       return [];
     }
   }
@@ -90,7 +82,6 @@ class StorageService {
     try {
       return await DatabaseHelper.getThisWeekSessions();
     } catch (e) {
-      print('Error getting this week sessions: $e');
       return [];
     }
   }
@@ -100,7 +91,6 @@ class StorageService {
       await DatabaseHelper.insertSession(session);
       return true;
     } catch (e) {
-      print('Error adding session: $e');
       return false;
     }
   }
@@ -110,7 +100,6 @@ class StorageService {
       await DatabaseHelper.updateSession(session);
       return true;
     } catch (e) {
-      print('Error updating session: $e');
       return false;
     }
   }
@@ -120,7 +109,6 @@ class StorageService {
       await DatabaseHelper.deleteSession(id);
       return true;
     } catch (e) {
-      print('Error deleting session: $e');
       return false;
     }
   }
@@ -131,7 +119,6 @@ class StorageService {
       await DatabaseHelper.updateSession(updatedSession);
       return true;
     } catch (e) {
-      print('Error toggling session attendance: $e');
       return false;
     }
   }
@@ -142,7 +129,6 @@ class StorageService {
     try {
       return await DatabaseHelper.getAttendancePercentage();
     } catch (e) {
-      print('Error getting attendance percentage: $e');
       return 0.0;
     }
   }
@@ -151,7 +137,6 @@ class StorageService {
     try {
       return await DatabaseHelper.getAttendanceCount();
     } catch (e) {
-      print('Error getting attendance count: $e');
       return {'total': 0, 'present': 0, 'absent': 0};
     }
   }
@@ -163,7 +148,6 @@ class StorageService {
       await DatabaseHelper.clearAllData();
       return true;
     } catch (e) {
-      print('Error clearing all data: $e');
       return false;
     }
   }
@@ -190,7 +174,6 @@ class StorageService {
         'pendingAssignments': pendingAssignments,
       };
     } catch (e) {
-      print('Error getting dashboard data: $e');
       return {
         'todaySessions': <Session>[],
         'upcomingAssignments': <Assignment>[],

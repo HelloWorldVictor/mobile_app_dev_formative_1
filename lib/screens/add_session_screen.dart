@@ -71,7 +71,7 @@ class AddSessionScreenState extends State<AddSessionScreen> {
       success = await StorageService.addSession(session);
     }
 
-    if (success) {
+    if (success && mounted) {
       Navigator.pop(context);
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
@@ -79,7 +79,7 @@ class AddSessionScreenState extends State<AddSessionScreen> {
           backgroundColor: AppColors.success,
         ),
       );
-    } else {
+    } else if (mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           content: Text('Error saving session'),
@@ -246,7 +246,7 @@ class AddSessionScreenState extends State<AddSessionScreen> {
               ),
               const SizedBox(height: 16),
               DropdownButtonFormField<String>(
-                value: _sessionType,
+                initialValue: _sessionType,
                 decoration: const InputDecoration(
                   labelText: AppStrings.sessionType,
                   border: OutlineInputBorder(),
