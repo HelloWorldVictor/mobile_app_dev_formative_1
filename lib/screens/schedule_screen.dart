@@ -232,3 +232,4 @@ class ScheduleScreenState extends State<ScheduleScreen> {
     return '$hour:$minute $period';
   }
 }
+
